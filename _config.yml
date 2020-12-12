@@ -20,7 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Join me, together, lets innovate, inspire and invigorate Sivanandha Rajadurai.
 twitter_username: sivanandhasr
 github_username: sivanandha
-minimal_mistakes_skin: default
+minimal_mistakes_skin: neon
+#minimal_mistakes_skin: default
 search: true
 
 # Build settings
