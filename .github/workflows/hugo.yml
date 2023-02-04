@@ -44,11 +44,15 @@ jobs:
 
       - name: Build Geekdoc theme (1/2)
         working-directory: ./themes/hugo-geekdoc
-        run: npm install
+        run: |
+          npm install
+          npm run build
 
       - name: Build Geekdoc theme (2/2)
         working-directory: ./themes/hugo-geekdoc
-        run: npm run build
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y asciidoctor
 
       - name: Install Hugo CLI
         run: |
