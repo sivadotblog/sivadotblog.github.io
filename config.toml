@@ -1,6 +1,5 @@
-baseURL = ''
-languageCode = 'en-us'
-title = 'Humana Data platform Handbook'
+baseURL = 'https://sivadotblog.github.io'
+title = 'Sivas Data platform Handbook'
 theme = 'hugo-geekdoc'
 
 
