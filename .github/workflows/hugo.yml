@@ -32,16 +32,23 @@ jobs:
     env:
       HUGO_VERSION: 0.101.0
     steps:
+      - name: Setup Node.js to build theme
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Build Geekdoc theme (1/2)
+        working-directory: ./themes/hugo-geekdoc
+        run: npm install
+
+      - name: Build Geekdoc theme (2/2)
+        working-directory: ./themes/hugo-geekdoc
+        run: gulp
+
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install required packages from json
-        run: |
-          # install required packages from package.json
-          npm install
-          # run the build script to build required assets
-          npm run build
 
       - name: Checkout
         uses: actions/checkout@v3
