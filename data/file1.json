@@ -1,0 +1,10 @@
+{
+    "title": "Sample Blog Post",
+    "date": "2022-12-01",
+    "author": "John Doe",
+    "categories": [
+        "tech",
+        "programming"
+    ],
+    "content": "This is the main content of the blog post, written in Markdown format.\n\nIt supports features like headers, lists, code blocks, and more."
+}
