@@ -1,0 +1,26 @@
+{
+    "products": [
+        {
+            "id": 1111,
+            "title": "Hugo Bobblehead",
+            "variants": [
+                {
+                    "id": 5555555,
+                    "product_id": 1111,
+                    "price": "1000"
+                }
+            ]
+        },
+        {
+            "id": 2222,
+            "title": "Hugo Hula Hoop",
+            "variants": [
+                {
+                    "id": 6666666,
+                    "product_id": 2222,
+                    "price": "25"
+                }
+            ]
+        }
+    ]
+}
