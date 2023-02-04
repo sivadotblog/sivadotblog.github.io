@@ -14,3 +14,6 @@ Discover what this Hugo theme is all about and the core-concepts behind it.
     {{ end }}
   {{ end }}
 {{ end }}`
+
+{{ $urlPre := "https://api.github.com" }}
+{{ $gistJ := getJSON $urlPre "/users/GITHUB_USERNAME/gists" }}
