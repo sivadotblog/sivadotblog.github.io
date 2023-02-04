@@ -1,7 +1,0 @@
-baseURL = ''
-languageCode = 'en-us'
-title = 'Siva's Handbook'
-theme = 'hugo-theme-relearn'
-[params]
-disableLandingPageButton = true
-collapsibleMenu = true
