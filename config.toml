@@ -1,0 +1,39 @@
+baseURL = "https://sivadotblog.github.io/sivanandha.github.io/"
+languageCode = "en-us"
+title = "My Hugo Site"
+theme = "shadocs"
+
+[params]
+  author = "Your Name"
+  description = "A sample Hugo site"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[permalinks]
+  post = "/:year/:month/:day/:slug/"
+
+[markup.highlight]
+  codeFences = true
+  lineNoStart = 1
+  lineNumbers = false
+  style = "monokai"
+
+[outputFormats.RSS]
+  mediaType = "application/xml"
+  baseName = "rss"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 2
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts"
+    weight = 3
