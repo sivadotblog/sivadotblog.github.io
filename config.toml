@@ -1,4 +1,4 @@
-baseURL = 'https://sivadotblog.github.io'
+baseURL = ''
 title = 'Sivas Data platform Handbook'
 theme = 'hugo-geekdoc'
 
