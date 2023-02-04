@@ -1,0 +1,7 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'Humana Data platform Handbook'
+theme = 'hugo-theme-relearn'
+[params]
+disableLandingPageButton = true
+collapsibleMenu = true
