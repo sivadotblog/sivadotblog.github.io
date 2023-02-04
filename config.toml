@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'https://sivadotblog.github.io/'
 languageCode = 'en-us'
 title = 'SIvas Data platform Handbook'
 theme = 'hugo-theme-relearn'
