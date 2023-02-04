@@ -1,6 +1,6 @@
 baseURL = ''
 languageCode = 'en-us'
-title = 'Humana Data platform Handbook'
+title = 'SIvas Data platform Handbook'
 theme = 'hugo-theme-relearn'
 [params]
   disableLandingPageButton = true
