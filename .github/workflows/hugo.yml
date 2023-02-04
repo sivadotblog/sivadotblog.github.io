@@ -48,7 +48,7 @@ jobs:
 
       - name: Build Geekdoc theme (2/2)
         working-directory: ./themes/hugo-geekdoc
-        run: gulp
+        run: npm run build
 
       - name: Install Hugo CLI
         run: |
