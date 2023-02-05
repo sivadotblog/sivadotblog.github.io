@@ -1,20 +1,38 @@
 <!-- layouts/teaminfra.html -->
-{{ $infra := .Site.Data.teaminfra }}
-<table>
-  <thead>
-    <tr>
-      <th>Service</th>
-      <th>Provider</th>
-      <th>Region</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{ range $service, $details := $infra }}
-    <tr>
-      <td>{{ $service }}</td>
-      <td>{{ $details.Provider }}</td>
-      <td>{{ $details.Region }}</td>
-    </tr>
-    {{ end }}
-  </tbody>
-</table>
+
+
+{{ define "main" }}
+  <article class="gdoc-post">
+    <header class="gdoc-post__header">
+      <h1 class="gdoc-post__title">{{ partial "utils/title" . }}</h1>
+      <div class="flex flex-wrap align-center gdoc-post__meta gdoc-post__meta--head">
+        {{ partial "posts/metadata.html" . }}
+      </div>
+    </header>
+    <section class="gdoc-markdown">
+
+      {{ $infra := .Site.Data.teaminfra }}
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Provider</th>
+            <th>Region</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range $service, $details := $infra }}
+          <tr>
+            <td>{{ $service }}</td>
+            <td>{{ $details.Provider }}</td>
+            <td>{{ $details.Region }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+      
+    </section>
+  </article>
+{{ end }}
+
+
