@@ -8,3 +8,10 @@ appserver:
 objectstorage:
   Provider: Azure
   Region: eastus
+
+service:
+  - database
+
+details:
+  Provider: AWS
+  Region: us-east-1
