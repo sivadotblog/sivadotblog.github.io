@@ -5,4 +5,4 @@ title: "Team Infrastructure"
 
 {{< sprites >}}
 
-{{< teaminfra teaminfra="team1" >}}
+{{< teaminfra teaminfra="teaminfra_team1" >}}

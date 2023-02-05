@@ -1,5 +1,6 @@
 <!-- layouts/shortcodes/teaminfra.html -->
-{{ $infra := .Site.Data (printf "teaminfra_%s" .Params.teaminfra) }}
+{{ $team := .Get 0 }}
+{{ $infra := index( .Site.Data $team) }}
 <table>
   <thead>
     <tr>
