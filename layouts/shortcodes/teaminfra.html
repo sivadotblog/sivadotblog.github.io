@@ -1,0 +1,20 @@
+<!-- layouts/shortcodes/teaminfra.html -->
+{{ $infra := .Site.Data (printf "teaminfra_%s" .Params.teaminfra) }}
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Provider</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $service, $details := $infra }}
+    <tr>
+      <td>{{ $service }}</td>
+      <td>{{ $details.Provider }}</td>
+      <td>{{ $details.Region }}</td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
