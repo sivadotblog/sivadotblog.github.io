@@ -1,6 +1,6 @@
 <!-- layouts/shortcodes/teaminfra.html -->
-{{ $team := .Get 0 }}
-{{ $infra := index( .Site.Data $team) }}
+{{ $team := .Get "teaminfra" }}
+{{ $infra := (index .Site.Data $team) }}
 <table>
   <thead>
     <tr>
