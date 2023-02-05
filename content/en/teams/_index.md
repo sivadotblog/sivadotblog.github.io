@@ -1,4 +1,8 @@
 ---
 title: "Team Infrastructure"
-type: "teaminfra"
 ---
+
+
+{{< sprites >}}
+
+{{< team >}}
