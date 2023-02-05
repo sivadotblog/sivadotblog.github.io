@@ -1,0 +1,10 @@
+# data/teaminfra.yaml
+database:
+  Provider: AWS
+  Region: us-west-2
+appserver:
+  Provider: GCP
+  Region: us-central1
+objectstorage:
+  Provider: Azure
+  Region: eastus
