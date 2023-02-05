@@ -10,7 +10,8 @@ objectstorage:
   Region: eastus
 
 service:
-  - database
+  Provider: AWS
+  Region: us-east-1
 
 details:
   Provider: AWS
