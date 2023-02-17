@@ -37,22 +37,22 @@ jobs:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      # - name: Setup Node.js to build theme
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: 17
+      - name: Setup Node.js to build theme
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17
 
-      # - name: Build Geekdoc theme (1/2)
-      #   working-directory: ./themes/hugo-geekdoc
-      #   run: |
-      #     npm install
-      #     npm run build
+      - name: Build Geekdoc theme (1/2)
+        working-directory: ./themes/hugo-geekdoc
+        run: |
+          npm install
+          npm run build
 
-      # - name: Build Geekdoc theme (2/2)
-      #   working-directory: ./themes/hugo-geekdoc
-      #   run: |
-      #     sudo apt-get update
-      #     sudo apt-get install -y asciidoctor
+      - name: Build Geekdoc theme (2/2)
+        working-directory: ./themes/hugo-geekdoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y asciidoctor
 
       - name: Install Hugo CLI
         run: |
