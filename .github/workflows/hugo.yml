@@ -65,17 +65,19 @@ jobs:
           submodules: recursive
 
       # Update references
-      - name: Git Sumbodule Update
-        run: |
-          git pull --recurse-submodules
-          git submodule update --remote --recursive
+      - name: Initialize submodules
+        run: git submodule update --init --recursive
 
-      - name: Commit update
+      - name: Update submodule
+        run: git submodule update --remote --merge
+
+      - name: Commit changes
         run: |
-          git config --global user.name 'sivadotblog'
-          git config --global user.email 'sivanandha@gmail.com'
-          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"
+          git config --global user.email "sivanandha@gmail.com"
+          git config --global user.name "sivadotblog"
+          git add .
+          git commit -m "Update submodule"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/{{ github.repository }}
 
       - name: Setup Pages
         id: pages
