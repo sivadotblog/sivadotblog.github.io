@@ -1,6 +1,4 @@
-baseURL = "sivadotblog.github.io"
-languageCode = "en-US"
-defaultContentLanguage = "en"
-
+baseURL = 'sivadotblog.github.io'
+languageCode = 'en-us'
 title = "Hugo Learn Documentation"
 theme = "hugo-theme-learn"
