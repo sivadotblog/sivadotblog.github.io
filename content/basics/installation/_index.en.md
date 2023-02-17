@@ -1,7 +1,7 @@
----
-title: Installation
-weight: 15
----
++++
+title = "Installation"
+weight = 15
++++
 
 The following steps are here to help you initialize your new website. If you don't know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/overview/quickstart/).
 
@@ -15,11 +15,11 @@ hugo new site <new_project>
 
 ## Install the theme
 
-Install the **Hugo-theme-learn** theme by following [this documentation](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)
+Install the Relearn theme by following [this documentation](https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme) using Hugo's module system.
 
-This theme's repository is: https://github.com/matcornic/hugo-theme-learn.git
+This theme's repository is: https://github.com/McShelby/hugo-theme-relearn.git
 
-Alternatively, you can [download the theme as .zip](https://github.com/matcornic/hugo-theme-learn/archive/master.zip) file and extract it in the `themes` directory
+Alternatively, you can [download the theme as .zip](https://github.com/McShelby/hugo-theme-relearn/archive/main.zip) file and extract it in the `themes` directory
 
 ## Basic configuration
 
@@ -27,18 +27,18 @@ When building the website, you can set a theme by using `--theme` option. Howeve
 
 ```toml
 # Change the default theme to be use when building the site with Hugo
-theme = "hugo-theme-learn"
+theme = "hugo-theme-relearn"
 
 # For search functionality
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML", "RSS", "SEARCH"]
 ```
 
 ## Create your first chapter page
 
 Chapters are pages that contain other child pages. It has a special layout style and usually just contains a _chapter name_, the _title_ and a _brief abstract_ of the section.
 
-```
+```markdown
 ### Chapter 1
 
 # Basics
@@ -46,13 +46,13 @@ Chapters are pages that contain other child pages. It has a special layout style
 Discover what this Hugo theme is all about and the core concepts behind it.
 ```
 
-renders as 
+renders as
 
-![A Chapter](/en/basics/installation/images/chapter.png?classes=shadow&width=60pc)
+![A Chapter](chapter.png?classes=shadow&width=60pc)
 
-**Hugo-theme-learn** provides archetypes to create skeletons for your website. Begin by creating your first chapter page with the following command
+The Relearn theme provides archetypes to create skeletons for your website. Begin by creating your first chapter page with the following command
 
-```
+```shell
 hugo new --kind chapter basics/_index.md
 ```
 
@@ -64,18 +64,18 @@ By default all chapters and pages are created as a draft. If you want to render 
 
 Then, create content pages inside the previously created chapter. Here are two ways to create content in the chapter:
 
-```
+```shell
 hugo new basics/first-content.md
 hugo new basics/second-content/_index.md
 ```
 
-Feel free to edit thoses files by adding some sample content and replacing the `title` value in the beginning of the files. 
+Feel free to edit those files by adding some sample content and replacing the `title` value in the beginning of the files.
 
 ## Launching the website locally
 
 Launch by using the following command:
 
-```
+```shell
 hugo serve
 ```
 
@@ -91,12 +91,12 @@ You should notice three things:
 
 When your site is ready to deploy, run the following command:
 
-```
+```shell
 hugo
 ```
 
 A `public` folder will be generated, containing all static content and assets for your website. It can now be deployed on any web server.
 
 {{% notice note %}}
-This website can be automatically published and hosted with [Netlify](https://www.netlify.com/) (Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)). Alternatively, you can use [Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+This website can be automatically published and hosted with [Netlify](https://www.netlify.com/) (Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)). Alternatively, you can use [GitHub pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/).
 {{% /notice %}}

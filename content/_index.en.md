@@ -1,41 +1,65 @@
----
-title: "Learn Theme for Hugo"
----
++++
+archetype = "home"
+title = "Hugo Relearn Theme"
++++
 
-# Hugo learn theme
-
-[Hugo-theme-learn](http://github.com/matcornic/hugo-theme-learn) is a theme for [Hugo](https://gohugo.io/), a fast and modern static website engine written in Go. Where Hugo is often used for blogs, this multilingual-ready theme is **fully designed for documentation**.
-
-This theme is a partial porting of the [Learn theme](http://learn.getgrav.org/) of [Grav](https://getgrav.org/), a modern flat-file CMS written in PHP.
-
-{{% notice tip %}}Learn theme works with a _page tree structure_ to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "cont/pages/_index.md"%}}) 
-{{% /notice %}}
-
-## Main features
-
-* [Automatic Search]({{%relref "basics/configuration/_index.md#activate-search" %}})
-* [Multilingual mode]({{%relref "cont/i18n/_index.md" %}})
-* **Unlimited menu levels**
-* **Automatic next/prev buttons to navigate through menu entries**
-* [Image resizing, shadow...]({{%relref "cont/markdown.en.md#images" %}})
-* [Attachments files]({{%relref "shortcodes/attachments.en.md" %}})
-* [List child pages]({{%relref "shortcodes/children/_index.md" %}})
-* [Mermaid diagram]({{%relref "shortcodes/mermaid.en.md" %}}) (flowchart, sequence, gantt)
-* [Customizable look and feel and themes variants]({{%relref "basics/style-customization/_index.md"%}})
-* [Buttons]({{%relref "shortcodes/button.en.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice.en.md" %}}), [Expand]({{%relref "shortcodes/expand.en.md" %}})
-
-![Screenshot](https://github.com/matcornic/hugo-theme-learn/raw/master/images/screenshot.png?width=40pc&classes=shadow)
-
-## Contribute to this documentation
-Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it
+The [Relearn theme](https://github.com/McShelby/hugo-theme-relearn) is a theme for [Hugo](https://gohugo.io/), a static website generator written in Go. Where Hugo is often used for blogs, this theme is designed with documentation in mind.
 
 {{% notice info %}}
-Your modification will be deployed automatically when merged.
+The theme is a fork of the great [Learn theme](https://github.com/matcornic/hugo-theme-learn) with the aim of fixing long outstanding bugs and adepting to latest Hugo features. As far as possible this theme tries to be a drop-in replacement for the Learn theme.
 {{% /notice %}}
 
-## Documentation website
-This current documentation has been statically generated with Hugo with a simple command : `hugo -t hugo-theme-learn` -- source code is [available here at GitHub](https://github.com/matcornic/hugo-theme-learn)
+## Features
 
-{{% notice note %}}
-Automatically published and hosted thanks to [Netlify](https://www.netlify.com/). Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)
+{{% notice tip %}}
+See [What's New]({{% relref "basics/migration" %}}) within the latest update.
 {{% /notice %}}
+
+- Usable offline, no external dependencies
+- Usable without a HTTP server from the file system
+- Support for Internet Explorer 11
+- Responsive design
+- Configurable hidden pages
+- Automatic next/prev buttons to navigate through menu entries
+- [Automatic Search]({{%relref "basics/configuration#activate-search" %}})
+- [Dedicated search page]({{%relref "basics/configuration#activate-dedicated-search-page" %}})
+- [Support for GFM]({{% relref "cont/markdown" %}}) (GitHub Flavored Markdown)
+- [Print]({{%relref "basics/configuration#activate-print-support" %}}) whole chapters or even the complete site
+- [Multilingual mode]({{%relref "cont/i18n" %}}) for English, Arabic, Simplified Chinese, Traditional Chinese, Czech, Dutch, Finnish, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, Turkish, Vietnamese
+- Support for languages written right to left
+- [Unrestricted menu configuration]({{%relref "cont/menushortcuts" %}}) relating to amount of items and level of nesting
+- [Font Awesome icons]({{%relref "shortcodes/icon" %}})
+- [Tagging support]({{%relref "cont/tags" %}})
+- [Image styling]({{%relref "cont/markdown#images" %}}) like sizing, shadow, border and alignment
+- [Syntax highlighting]({{%relref "cont/syntaxhighlight" %}})
+- [Customizable look and feel]({{%relref "basics/customization"%}})
+- [Predefined (light, dark) and customizable color variants]({{%relref "basics/generator" %}})
+- [Attachments files]({{%relref "shortcodes/attachments" %}})
+- [List child pages]({{%relref "shortcodes/children" %}})
+- [Math and chemical formulae]({{%relref "shortcodes/math" %}}) using the MathJax library
+- [Mermaid diagrams]({{%relref "shortcodes/mermaid" %}}) for flowcharts, sequences, gantts, pie, etc.
+- [Swagger UI]({{%relref "shortcodes/swagger" %}}) for OpenAPI Specifications
+- [Badges]({{%relref "shortcodes/badge" %}})
+- [Buttons]({{%relref "shortcodes/button" %}})
+- [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice" %}})
+- [Expand]({{%relref "shortcodes/expand" %}})
+- [Tabs]({{%relref "shortcodes/tabs" %}})
+- [File inclusion]({{%relref "shortcodes/include" %}})
+
+## Getting Support
+
+To get support, feel free to open a new [discussion topic](https://github.com/McShelby/hugo-theme-relearn/discussions) or [issue report](https://github.com/McShelby/hugo-theme-relearn/issues) in the official repository on GitHub.
+
+## Become a Contributor
+
+Feel free to update this documentation by just clicking the {{% button style="transparent" icon="pen" %}}{{% /button %}} button displayed on top right of each page. Your changes will be deployed automatically once they were reviewed.
+
+You are most welcome to contribute bugfixes or even new features to the source code by making pull requests to the [official repository](https://github.com/McShelby/hugo-theme-relearn) via GitHub. Please visit the [contribution guidelines]({{%relref "dev/contributing" %}}) first.
+
+## License
+
+This theme is licensed under the [MIT License](https://github.com/McShelby/hugo-theme-relearn/blob/main/LICENSE).
+
+## Credits
+
+This theme would not be possible without the work of many others. See the [credits]({{%relref "more/credits" %}}) for a detailed list.

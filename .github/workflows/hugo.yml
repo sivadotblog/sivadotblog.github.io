@@ -32,10 +32,10 @@ jobs:
     env:
       HUGO_VERSION: 0.101.0
     steps:
-      # - uses: actions/checkout@v2
-      #   with:
-      #     submodules: true # Fetch Hugo themes (true OR recursive)
-      #     fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
       # - name: Setup Node.js to build theme
       #   uses: actions/setup-node@v1
@@ -61,8 +61,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v3
-        # with:
-        #   submodules: recursive
+        with:
+          submodules: recursive
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v1

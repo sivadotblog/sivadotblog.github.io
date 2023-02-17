@@ -1,85 +1,123 @@
----
-title: Attachments
-description : "The Attachments shortcode displays a list of files attached to a page."
----
++++
+description = "List of files attached to a page"
+title = "Attachments"
++++
 
-The Attachments shortcode displays a list of files attached to a page.
+The `attachments` shortcode displays a list of files attached to a page with adjustable color, title and icon.
 
-{{% attachments /%}}
+{{% attachments sort="asc" /%}}
 
 ## Usage
 
-The shortcurt lists files found in a **specific folder**.
-Currently, it support two implementations for pages
+While the examples are using shortcodes with named parameter you are free to also call this shortcode from your own partials.
 
-1. If your page is a markdown file, attachements must be placed in a **folder** named like your page and ending with **.files**.
+{{< tabs groupId="shortcode-parameter">}}
+{{% tab name="shortcode" %}}
+
+````go
+{{%/* attachments sort="asc" /*/%}}
+````
+
+{{% /tab %}}
+{{% tab name="partial" %}}
+
+````go
+{{ partial "shortcodes/attachments.html" (dict
+  "context" .
+  "sort" "asc"
+)}}
+````
+
+{{% /tab %}}
+{{< /tabs >}}
+
+### Parameter
+
+| Name        | Default         | Notes       |
+|:------------|:----------------|:------------|
+| **style**   | `transparent`   | The style scheme used for the box.<br><br>- by severity: `info`, `note`, `tip`, `warning`<br>- by brand color: `primary`, `secondary`, `accent`<br>- by color: `blue`, `green`, `grey`, `orange`, `red`<br>- by special color: `default`, `transparent` |
+| **color**   | see notes       | The [CSS color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) to be used. If not set, the chosen color depends on the **style**. Any given value will overwrite the default.<br><br>- for severity styles: a nice matching color for the severity<br>- for all other styles: the corresponding color |
+| **title**   | see notes       | Arbitrary text for the box title. Depending on the **style** there may be a default title. Any given value will overwrite the default.<br><br>- for severity styles: the matching title for the severity<br>- for all other styles: `Attachments`<br><br>If you want no title for a severity style, you have to set this parameter to `" "` (a non empty string filled with spaces) |
+| **icon**    | see notes       | [Font Awesome icon name]({{%relref "shortcodes/icon#finding-an-icon" %}}) set to the left of the title. Depending on the **style** there may be a default icon. Any given value will overwrite the default.<br><br>- for severity styles: a nice matching icon for the severity<br>- for all other styles: `paperclip`<br><br>If you want no icon, you have to set this parameter to `" "` (a non empty d with spaces) |
+| **sort**    | `asc`           | Sorting the output in `asc`ending or `desc`ending order. |
+| **pattern** | `.*`            | A [regular expressions](https://en.wikipedia.org/wiki/Regular_expression), used to filter the attachments by file name. For example:<br><br>- to match a file suffix of 'jpg', use `.*\.jpg` (not `*.\.jpg`)<br>- to match file names ending in `jpg` or `png`, use `.*\.(jpg\|png)` |
+
+## Setup
+
+### Single language
+
+The shortcode lists files found in a specific folder. The name of the folder depends on your page type (either branch bundle, leaf bundle or page).
+
+1. For simple pages, attachments must be placed in a folder named like your page and ending with `.files`.
 
     > * content
     >   * _index.md
-    >   * page.files
+    >   * **page.files**
     >      * attachment.pdf
     >   * page.md
 
-2. If your page is a **folder**, attachements must be placed in a nested **'files'** folder.
+2. If your page is a branch or leaf bundle, attachments must be placed in a nested `_index.files` or `index.files` folder, accordingly.
+
+    For branch bundles:
 
     > * content
     >   * _index.md
     >   * page
     >      * index.md
-    >      * files
+    >      * **index.files**
     >          * attachment.pdf
 
-Be aware that if you use a multilingual website, you will need to have as many folders as languages.
+    For leaf bundles:
 
-That's all!
+    > * content
+    >   * _index.md
+    >   * page
+    >      * _index.md
+    >      * **_index.files**
+    >          * attachment.pdf
 
-### Parameters
+### Multilingual
 
-| Parameter | Default | Description |
-|:--|:--|:--|
-| title | "Attachments" | List's title  |
-| style | "" | Choose between "orange", "grey", "blue" and "green" for nice style |
-| pattern | ".*" | A regular expression, used to filter the attachments by file name. The **pattern** parameter value must be a [regular expression](https://en.wikipedia.org/wiki/Regular_expression). |
+Be aware that if you use a multilingual website, you will need to have as many folders as languages and the language code must be part of the folder name.
 
-For example:
+Eg. for a site in English and Piratish:
 
-* To match a file suffix of '.jpg', use `.*\.jpg$` (not `*.jpg`).
-* To match file names ending in '.jpg' or '.png', use `.*\.(jpg|png)$`.
+  > * content
+  >   * _index.en.md
+  >   * _index.pir.md
+  >   * **page.en.files**
+  >      * attachment.pdf
+  >   * **page.pir.files**
+  >      * attachment.pdf
+  >   * page.en.md
+  >   * page.pir.md
 
-### Examples
+## Examples
 
-#### List of attachments ending in pdf or mp4
+### Custom Title, List of Attachments Ending in pdf or mp4
 
+````go
+{{%/* attachments title="Related files" pattern=".*\.(pdf|mp4)" /*/%}}
+````
 
-    {{%/*attachments title="Related files" pattern=".*\.(pdf|mp4)$"/*/%}}
+{{% attachments title="Related files" pattern=".*\.(pdf|mp4)" /%}}
 
-renders as
+### Info Styled Box, Descending Sort Order
 
-{{%attachments title="Related files" pattern=".*\.(pdf|mp4)$"/%}}
+````go
+{{%/* attachments style="info" sort="desc" /*/%}}
+````
 
-#### Colored styled box
+{{% attachments style="info" sort="desc" /%}}
 
-    {{%/*attachments style="orange" /*/%}}
+### With User-Defined Color and Font Awesome Brand Icon
 
-renders as
+````go
+{{%/* attachments color="fuchsia" icon="fab fa-hackerrank" /*/%}}
+````
 
-{{% attachments style="orange" /%}}
+{{% attachments color="fuchsia" icon="fab fa-hackerrank" /%}}
 
+### Style, Color, Title and Icons
 
-    {{%/*attachments style="grey" /*/%}}
-
-renders as 
-
-{{% attachments style="grey" /%}}
-
-    {{%/*attachments style="blue" /*/%}}
-
-renders as
-
-{{% attachments style="blue" /%}}
-    
-    {{%/*attachments style="green" /*/%}}
-
-renders as
-
-{{% attachments style="green" /%}}
+For further examples for **style**, **color**, **title** and **icon**, see the [`notice` shortcode]({{% relref "shortcodes/notice" %}}) documentation. The parameter are working the same way for both shortcodes, besides having different defaults.

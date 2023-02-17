@@ -1,6 +1,8 @@
-+++ 
-title = "page test" 
-description = "This is a page test"
-+++
+---
+description: |
+  This is a plain page test, and the beginning of a YAML multiline description...
+title: "page X"
+weight: 1
+---
 
-This is a test demo child page
+This is a plain demo child page.
