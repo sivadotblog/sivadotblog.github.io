@@ -34,7 +34,7 @@ defaultContentLanguage = "en"
 # disableLanguages = ['pir']
 
 # the site's title of this showcase; you should change this ;-)
-title = "Hugo Relearn Documentation"
+title = "Data Platforms & Data Engineering"
 
 # We disable this for testing the exampleSite; you must do so too
 # if you want to use the themes parameter disableGeneratorVersion=true;
@@ -86,7 +86,7 @@ disableHugoGeneratorInject = true
 # your project
 [Languages]
   [Languages.en]
-    title = "Hugo Relearn Theme"
+    title = "Data Platforms & Data Engineering "
     weight = 1
     languageName = "English"
     landingPageName = "<i class='fas fa-home'></i> Home"
