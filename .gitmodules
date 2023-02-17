@@ -1,3 +1,6 @@
 [submodule "themes/hugo-theme-relearn"]
 	path = themes/hugo-theme-relearn
 	url = https://github.com/McShelby/hugo-theme-relearn
+[submodule "content/content-repo"]
+	path = content/content-repo
+	url = https://github.com/sivadotblog/content-repo
