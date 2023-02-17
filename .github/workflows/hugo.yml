@@ -81,7 +81,7 @@ jobs:
           git config --global user.name "sivadotblog"
           git add .
           git commit -m "Update submodule"
-          git push https://${GH_TOKEN}@github.com/${{ github.repository }}
+          git push -am https://${GH_TOKEN}@github.com/${{ github.repository }} | echo "No changes to commit"
 
       - name: Setup Pages
         id: pages
