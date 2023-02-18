@@ -40,3 +40,17 @@ Code of Conduct
 All contributors to this document are expected to adhere to our [code of conduct](insert link to your code of conduct). Please read the code of conduct carefully before contributing and follow its guidelines to ensure that this is a welcoming and inclusive environment for all contributors.
 
 Thank you for your contributions to our documentation!
+
++++
+archetype = "home"
+title = "Data Platform Engineering - Technical Documentation"
++++
+{{% notice info %}}
+The theme is a fork of the great [Learn theme](https://github.com/matcornic/hugo-theme-learn) with the aim of fixing long outstanding bugs and adepting to latest Hugo features. As far as possible this theme tries to be a drop-in replacement for the Learn theme.
+{{% /notice %}}
+
+
+
+{{% notice tip %}}
+See [What's New]({{% relref "basics/migration" %}}) within the latest update.
+{{% /notice %}}
