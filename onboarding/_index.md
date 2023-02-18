@@ -1,5 +1,5 @@
 +++
-archtype = "chapter"
+archetype = "chapter"
 title= "Onboarding"
 weight = 1
 +++
