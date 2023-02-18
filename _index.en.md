@@ -52,5 +52,5 @@ The theme is a fork of the great [Learn theme](https://github.com/matcornic/hugo
 
 
 {{% notice tip %}}
-See [What's New]({{% relref "basics/migration" %}}) within the latest update.
+See [What's New](https://github.com/matcornic/hugo-theme-learn) within the latest update.
 {{% /notice %}}
