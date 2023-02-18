@@ -1,7 +1,6 @@
 +++
 archetype = "chapter"
-title = "Content"
-weight = 2
+title = "Contribute"
 +++
 
 Find out how to create and organize your content quickly and intuitively.
