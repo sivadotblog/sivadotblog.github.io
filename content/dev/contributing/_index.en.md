@@ -4,7 +4,7 @@ title = "Contributing"
 +++
 
 ## Code Quality
-
+ s
 A new release can happen at any time from the `main` branch of the [GitHub project](https://github.com/McShelby/hugo-theme-relearn) without further accknowledgment. This makes it necessary that, every pushed set of changesets into the `main` branch **must** be self-contained and correct, resulting in a releasable version.
 
 Stay simple for the user by focusing on the mantra "convention over configuration".
