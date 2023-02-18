@@ -6,3 +6,4 @@
 [submodule "content"]
 	path = content
 	url = https://github.com/sivadotblog/sivadotblog.github.io
+	branch = master
