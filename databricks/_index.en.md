@@ -1,7 +1,7 @@
 +++
 archetype = "chapter"
 title = "Databricks"
-weight = 1
+weight = 2
 +++
 
 # Databricks Documentation
