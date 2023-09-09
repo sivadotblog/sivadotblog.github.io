@@ -41,6 +41,17 @@ title = "Data Platforms & Data Engineering"
 # otherwise Hugo will create a generator tag on your home page
 disableHugoGeneratorInject = true
 
+[module]
+    # uncomment line below for temporary local development of module
+    # or when using a 'theme' as a git submodule
+    replacements = "github.com/colinwilson/lotusdocs -> lotusdocs"
+    [[module.imports]]
+        path = "github.com/colinwilson/lotusdocs"
+        disable = false
+    [[module.imports]]
+        path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+        disable = false
+        
 [outputs]
   # add JSON to the home to support Lunr search; This is a mandatory setting
   # for the search functionality
