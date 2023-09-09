@@ -39,28 +39,22 @@ jobs:
           submodules: recursive
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      # # Update references
-      # - name: Initialize submodules
-      #   run: git submodule update --init --recursive
-
-      # - name: Update submodule
-      #   run: git submodule update --remote --merge
-      #setup golang
-
       - uses: actions/setup-go@v4
         with:
           go-version: ">=1.17.0"
       - run: go version
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v1
       - name: Build with Hugo
         run: |
           hugo \
