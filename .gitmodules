@@ -7,3 +7,6 @@
 	path = content
 	url = https://github.com/sivadotblog/sivadotblog.github.io
 	branch = master
+[submodule "themes/lotusdocs"]
+	path = themes/lotusdocs
+	url = https://github.com/colinwilson/lotusdocs
