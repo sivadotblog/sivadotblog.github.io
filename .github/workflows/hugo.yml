@@ -33,16 +33,6 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       HUGO_VERSION: 0.101.0
     steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -50,12 +40,23 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      # Update references
-      - name: Initialize submodules
-        run: git submodule update --init --recursive
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      - name: Update submodule
-        run: git submodule update --remote --merge
+      # # Update references
+      # - name: Initialize submodules
+      #   run: git submodule update --init --recursive
+
+      # - name: Update submodule
+      #   run: git submodule update --remote --merge
+      #setup golang
+
+      - uses: actions/setup-go@v4
+        with:
+          go-version: ">=1.17.0"
+      - run: go version
 
       - name: Setup Pages
         id: pages

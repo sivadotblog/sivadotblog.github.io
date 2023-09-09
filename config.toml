@@ -22,7 +22,7 @@ uglyURLs = false     # true -> basic/index.html -> basic.html
 themesdir = "themes"
 # yeah, well, obviously a mandatory setting for your site, if you want to
 # use this theme ;-)
-theme = "hugo-theme-relearn"
+theme = "hugo-lotusdocs"
 
 # the main language of this site; also an automatic pirrrate translation is
 # available in this showcase
