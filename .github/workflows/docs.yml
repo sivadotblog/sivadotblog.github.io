@@ -3,9 +3,9 @@ name: docs
 on:
   push:
     branches:
-      - main
+      - master
     paths-ignore:
-      - '**/__tests__/**'
+      - "**/__tests__/**"
   workflow_dispatch:
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
 
     env:
       DOCS_GA_ID: G-CTB8FQ7VMW
-      NODE_VERSION: '18'
+      NODE_VERSION: "18"
 
     steps:
       - uses: actions/checkout@v3
