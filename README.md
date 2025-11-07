@@ -10,7 +10,7 @@ A beautiful single-page Jekyll site built with the minimal-mistakes theme, showc
 - **GitHub Pages Ready**: Automatic deployment via GitHub Actions
 - **SEO Optimized**: Built-in SEO tags and sitemap generation
 
-## 📋 Deployment Instructions
+## � Deployment Instructions
 
 ### 1. Enable GitHub Pages
 

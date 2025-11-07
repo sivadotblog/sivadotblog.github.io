@@ -4,7 +4,6 @@ title: "Welcome"
 header:
   overlay_color: "#1a365d"
   overlay_filter: "0.5"
-  overlay_image: # You can add a header image path here if you want
   actions:
     - label: "Visit My Website"
       url: "https://siva.blog"
@@ -14,24 +13,18 @@ excerpt: "Passionate Technologist & Platform Engineering Leader"
 intro: 
   - excerpt: 'Hello there! I'm a passionate technologist and a leader in the realm of cloud data platforms and platform engineering. My journey has been marked by a deep commitment to innovation, collaboration, and excellence in the field of technology.'
 feature_row:
-  - image_path: # Optional: add an icon or image
-    title: "🚀 Passionate Technologist"
+  - title: "🚀 Passionate Technologist"
     excerpt: "My love for technology is not just about the tools and platforms; it's about how these can transform lives and industries. I've dedicated my career to mastering and contributing to cloud data platforms, believing in their power to revolutionize how we process, analyze, and leverage data."
-  - image_path: # Optional: add an icon or image
-    title: "💼 Experienced Leader"
+  - title: "💼 Experienced Leader"
     excerpt: "Leading by example, I've had the privilege of architecting cutting-edge platforms like Databricks, Snowflake, and Prefect. My leadership style is rooted in empathy, fostering a culture of innovation, and empowering teams to achieve their best."
-  - image_path: # Optional: add an icon or image
-    title: "⚙️ Expert in Platform Engineering"
+  - title: "⚙️ Expert in Platform Engineering"
     excerpt: "I believe in the power of end-to-end automation. From intake to onboarding, I've built DevOps pipelines that streamline processes, enhance efficiency, and drive continuous improvement."
 feature_row2:
-  - image_path: # Optional: add an icon or image
-    title: "🤝 Collaboration Over Competition"
+  - title: "🤝 Collaboration Over Competition"
     excerpt: "I firmly believe that the best solutions come from working together. I'm always looking to collaborate with like-minded individuals and teams who are passionate about making a difference through technology."
-  - image_path: # Optional: add an icon or image
-    title: "📚 Continuous Learning"
+  - title: "📚 Continuous Learning"
     excerpt: "The tech landscape is ever-evolving, and so am I. I'm committed to learning and adapting, ensuring that my skills and knowledge are always at the cutting edge."
-  - image_path: # Optional: add an icon or image
-    title: "💡 Making an Impact"
+  - title: "💡 Making an Impact"
     excerpt: "My goal is not just to innovate but to make a tangible impact. Whether it's through mentoring, building scalable solutions, or driving technological advancements, I strive to leave a positive mark on the industry and the community."
 ---
 
